@@ -67,19 +67,38 @@ fp.write(newjson)
 fp.close()
 
 # Congratulations
-print(f'''
-You have now the downloaded {actual_version} of Bootstrap Icons and it's saved in the BootstapIcons.json.\n
-1. Open the file and copy the content to your power app in the OnStart field of the App.\n
-2. Use the following code in the image content:
-\t"data:image/svg+xml;utf8, " & EncodeUrl(
-\tSubstitute(
-\t\tLookUp(
-\t\t\tcolBSIcons;
-\t\t\tIconName = "<ICON NAME ex. grid-3x3-gap-fill>"
-\t\t)
-\t\t.IconData;
-\t\t\t"currentColor";
-\t\t\tPrimaryColorText
-\t\t)
-\t)
-      ''')
+if choice == 1:
+    print(f'''
+        You have now the downloaded {actual_version} of Bootstrap Icons and it's saved in the BootstapIcons.json.\n
+        1. Open the file and copy the content to your power app in the OnStart field of the App.\n
+        2. Use the following code in the image content:
+        \t"data:image/svg+xml;utf8, " & EncodeUrl(
+        \tSubstitute(
+        \t\tLookUp(
+        \t\t\tcolBSIcons,
+        \t\t\tIconName = "<ICON NAME ex. grid-3x3-gap-fill>"
+        \t\t)
+        \t\t.IconData,
+        \t\t\t"currentColor",
+        \t\t\tPrimaryColorText
+        \t\t)
+        \t)
+    ''')
+
+if choice == 2:
+    print(f'''
+        You have now the downloaded {actual_version} of Bootstrap Icons and it's saved in the BootstapIcons.json.\n
+        1. Open the file and copy the content to your power app in the OnStart field of the App.\n
+        2. Use the following code in the image content:
+        \t"data:image/svg+xml;utf8, " & EncodeUrl(
+        \tSubstitute(
+        \t\tLookUp(
+        \t\t\tcolBSIcons;
+        \t\t\tIconName = "<ICON NAME ex. grid-3x3-gap-fill>"
+        \t\t)
+        \t\t.IconData;
+        \t\t\t"currentColor";
+        \t\t\tPrimaryColorText
+        \t\t)
+        \t)
+    ''')
